@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Library</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+ 
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <img src="CPC3-removebg-preview.png" alt="cpc library" width="70" height="60">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">CPC Library</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Books.html">Books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="Library Officials.html">Library Officials</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="login.html">Login</a></li>
+                  <li><a class="dropdown-item" href="signup.html">Signup</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="carousel-container mt-5" id="carousel">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="library-room.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="library 2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="library 3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+   
+    
+
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+
+  <div>
+    <footer class="bg-dark text-light text-center py-3">
+      &copy; 2023 CPC Library
+  </footer>
+  
+  </div>
+
+</body>
+</html>
+
+
+ <style>
+.navbar{
+ background-color:#87CEEB;
+ height: 70px;
+ margin: 20px;
+ border-radius:16px;
+ padding:0.5rem;
+}
+
+ 
+.nav-link{
+    background-size: cover; 
+    margin-right: 20px;
+    margin-left: 20px;
+    color: rgb(7, 7, 7);
+    text-transform: uppercase;
+    font-size: bold;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    transition: ease .40s;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+.nav-link:hover{
+    background: #b4dcf5;
+    transform: scale(1.1);
+    color: #232a30;
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(49, 80, 221, 0.2);
+}
+.nav-link.active {
+    background-color: #eaeeee; 
+    color: var(--second-color); 
+    border-radius: 50px; 
+    margin-right: 60px;
+    width: 100%;
+    text-align: center;
+}
+.nav-link.active:hover {
+    background-color: #115171;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(17, 81, 113, 0.7);
+    transform: scale(1.1);
+}
+.carousel-container{
+    padding: 100px 100px;
+}
+.carousel-item img {
+    border-radius: 50px; 
+    
+}
+
+           
+
+</style> 
+
+
+<script>
+
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function (){
+const currentScrollPos = window.pageYOffset;
+const navbar = document.getElementbyId("navbar");
+
+if (prevScrollpos > currentScrollPos){
+ navbar.style.height ="120px";
+ navbar.style.opacity="1";
+
+
+} else {
+
+navbar.style.height = "0";
+navbar.style.opacity= "0";
+
+
+}
+
+
+prevScrollpos = currentScrollPos;
+
+
+
+
+};
+
+</script>
+ 
